@@ -1,0 +1,9 @@
+{
+    "activeSolution": "../Wxxx.csolution.yml",
+    "activeTarget": "ARMCM33",
+    "targetSet": {
+        "Wxxx": {
+            "activeTargetType": "ARMCM33"
+        }
+    }
+}

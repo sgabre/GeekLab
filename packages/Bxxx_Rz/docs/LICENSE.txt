@@ -1,0 +1,48 @@
+# PROPRIETARY SOFTWARE LICENSE
+
+Copyright (c) 2026 GSI. All rights reserved.
+
+## 1. Ownership
+
+This software, including source code, object code, documentation, configuration files and associated materials (the "Software"), is the property of GSI.
+
+## 2. License Grant
+
+GSI grants authorized internal users and development teams a limited, non-exclusive, non-transferable license to:
+
+- Use the Software for internal development purposes.
+- Integrate the Software into GSI firmware projects.
+- Modify the Software when necessary for authorized project integration.
+- Build and test firmware products incorporating the Software.
+
+## 3. Restrictions
+
+Unless explicitly authorized in writing by GSI, users shall not:
+
+- Distribute the Software outside GSI.
+- Publish or disclose the source code to unauthorized third parties.
+- Sell, sublicense or commercially redistribute the Software independently.
+- Remove copyright notices or proprietary identification.
+- Use the Software for purposes outside the authorized project scope.
+
+## 4. Intellectual Property
+
+All intellectual property rights associated with the Software remain with GSI.
+
+Modifications and derivative works shall be handled according to GSI internal intellectual property policies and applicable agreements.
+
+## 5. Warranty Disclaimer
+
+The Software is provided "AS IS", without warranties of any kind, express or implied, to the extent permitted by applicable law.
+
+GSI does not guarantee that the Software is free from defects or suitable for every specific application.
+
+## 6. Liability
+
+To the extent permitted by applicable law, GSI shall not be liable for damages arising from the use or inability to use the Software.
+
+## 7. Termination
+
+This license may be terminated if the user violates its terms.
+
+Upon termination, the user must stop using the Software and follow

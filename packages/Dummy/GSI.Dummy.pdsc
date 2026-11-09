@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package schemaVersion="1.7.0">
+
+  <vendor>GSI</vendor>
+  <name>Dummy</name>
+  <description>GSI Dummy</description>
+  <url>https://example.com/</url>
+
+  <license>./docs/LICENSE.txt</license>
+
+  <releases>
+    <release version="1.0.0" date="2026-09-15">
+      Initial release
+    </release>
+  </releases>
+
+  <components>
+    <component Cclass="CDummy" Cgroup="GDummy" Cvariant="Source" Cversion="1.0.0">
+      <description>
+        Dummy Component Source files.
+      </description>
+      <RTE_Components_h>
+      <!-- the following content goes into file 'RTE_Components.h' -->
+      #define RTE_DUMMY_DEBUG             /* Dummy Debug Version */
+      </RTE_Components_h>
+ 
+      <files>
+        <file category="doc"    name="docs/ReleaseNote.pdf"/>
+        <file category="doc"    name="docs/TestReport.pdf"/>
+        <file category="doc"    name="docs/IntegrationGuideline.pdf"/>
+        <file category="header" name="config/Dummy_Config.h" attr="config" version="1.0.0"/>
+        <file category="header"   name="include/Dummy.h"/>
+        <file category="sourceC"  name="source/Dummy.c"/>
+        <file category="source" name="templates/cDummy.c" attr="template" select="Dummy Weak Functions"/>
+      </files>
+    </component>
+
+
+  </components>
+
+
+
+</package>

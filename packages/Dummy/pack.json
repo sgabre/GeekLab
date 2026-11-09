@@ -1,0 +1,8 @@
+{
+	"PACK_VENDOR": "GSI",
+	"PACK_NAME": "Dummy",
+	"PACK_DIRS": ["./source", "./templates"],
+	"PACK_BASE_FILES": ["./docs/LICENSE.txt", "./docs/*.pdf", "./include/Dummy.h", "./config/Dummy_Config.h"],
+	"PDSC_FILES": ["./GSI.Dummy.pdsc"],
+	"PACK_WAREHOUSE": "../Packs"
+}

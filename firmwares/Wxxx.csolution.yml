@@ -1,0 +1,53 @@
+# A solution is a collection of related projects that share same base configuration.
+solution:
+  created-for: CMSIS-Toolbox@2.12.0
+  cdefault: # use CMSIS-Toolbox default Compiler options
+
+  # Compilers that can be selected
+  select-compiler:
+    - compiler: AC6
+    - compiler: GCC
+    - compiler: IAR
+    - compiler: CLANG
+
+  # List of miscellaneous tool-specific controls
+  misc:
+    - for-compiler: AC6 # GDB requires DWARF 5, remove when using uVision Debugger
+      C-CPP:
+        - -gdwarf-5
+      ASM:
+        - -gdwarf-5
+
+  # List the packs that define the device and/or board.
+  packs:
+    - pack: ARM::Cortex_DFP@1.2.0
+    - pack: ARM::CMSIS
+    - pack: GSI::Packy@1.0.0
+
+  # List different hardware targets that are used to deploy the solution.
+  target-types:
+    - type: ARMCM33
+      device: ARMCM33
+      target-set:
+        - set:
+          images:
+            - project-context: tiny.Debug
+
+  # List of different build configurations.
+  build-types:
+    - type: Debug
+      debug: on
+      optimize: none
+      misc:
+        - for-compiler: AC6
+          C:
+            - -funwind-tables # ensure reliable stack unwinding with GDB
+
+    - type: Release
+      debug: off
+      optimize: balanced
+
+  # List related projects.
+  projects:
+    - project: tiny/tiny.cproject.yml
+  compiler: GCC

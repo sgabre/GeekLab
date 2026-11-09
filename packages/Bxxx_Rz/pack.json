@@ -1,0 +1,8 @@
+{
+	"PACK_VENDOR": "GSI",
+	"PACK_NAME": "Bxxx",
+	"PACK_DIRS": ["./docs", "./include","./source", "./config"],
+	"PACK_BASE_FILES": ["./docs/LICENSE.txt"],
+	"PDSC_FILES": ["./GSI.Bxxx.pdsc"],
+	"PACK_WAREHOUSE": "../Packs"
+}

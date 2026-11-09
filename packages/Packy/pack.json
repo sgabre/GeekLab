@@ -1,0 +1,8 @@
+{
+	"PACK_VENDOR": "GSI",
+	"PACK_NAME": "Packy",
+	"PACK_DIRS": ["./docs","./source","./libraries"],
+	"PACK_BASE_FILES": ["./source/config/Packy_Config.h", "./source/Packy.h"],
+	"PDSC_FILES": ["./GSI.Packy.pdsc"],
+	"PACK_WAREHOUSE": "../Packs"
+}

@@ -1,0 +1,140 @@
+{
+  "tools": [
+    {
+  "id": "arm-none-eabi-gcc",
+  "name": "Arm GNU Toolchain",
+  "command": "arm-none-eabi-gcc -dumpfullversion",
+  "regex": "^([0-9]+\\.[0-9]+\\.[0-9]+)$",
+  "expected_version": "14.2.1",
+  "required": true
+},
+    {
+  "id": "arm-none-eabi-gdb",
+  "name": "GNU GDB (ARM)",
+  "command": "arm-none-eabi-gdb --version",
+  "regex": "GNU gdb .*\\) ([0-9]+\\.[0-9]+\\.[0-9]+)",
+  "expected_version": "15.2.90",
+  "required": true
+},
+    {
+      "id": "cmake",
+      "name": "CMake",
+      "command": "cmake --version",
+      "regex": "cmake version ([0-9]+\\.[0-9]+\\.[0-9]+)",
+      "expected_version": "3.25.1",
+      "required": true
+    },
+    {
+      "id": "ninja",
+      "name": "Ninja",
+      "command": "ninja --version",
+      "regex": "([0-9]+\\.[0-9]+\\.[0-9]+)",
+      "expected_version": "1.11.1",
+      "required": true
+    },
+    {
+      "id": "st-flash",
+      "name": "ST-LINK Flasher",
+      "command": "st-flash --version",
+      "regex": "([0-9]+\\.[0-9]+\\.[0-9]+)",
+      "expected_version": "1.7.0",
+      "required": true
+    },
+    {
+      "id": "openocd",
+      "name": "OpenOCD",
+      "command": "openocd --version",
+      "regex": "([0-9]+\\.[0-9]+\\.[0-9]+)",
+      "expected_version": "0.12.0",
+      "required": true
+    },
+    {
+      "id": "docker",
+      "name": "Docker",
+      "command": "docker --version",
+      "regex": "Docker version ([0-9]+\\.[0-9]+\\.[0-9]+)",
+      "expected_version": "28.4.0",
+      "required": true
+    },
+    {
+      "id": "git",
+      "name": "Git",
+      "command": "git --version",
+      "regex": "git version ([0-9]+\\.[0-9]+\\.[0-9]+)",
+      "expected_version": "2.39.5",
+      "required": true
+    },
+    {
+      "id": "gcov",
+      "name": "Gcov",
+      "command": "gcov --version",
+      "regex": "([0-9]+\\.[0-9]+\\.[0-9]+)",
+      "expected_version": "12.2.0",
+      "required": true
+    },
+    {
+      "id": "gcovr",
+      "name": "Gcovr",
+      "command": "gcovr --version",
+      "regex": "gcovr ([0-9]+\\.[0-9]+)",
+      "expected_version": "5.2",
+      "required": true
+    },
+    {
+      "id": "doxygen",
+      "name": "Doxygen",
+      "command": "doxygen --version",
+      "regex": "([0-9]+\\.[0-9]+\\.[0-9]+)",
+      "expected_version": "1.9.4",
+      "required": true
+    },
+    {
+      "id": "graphviz",
+      "name": "Graphviz",
+      "command": "dot -V",
+      "regex": "version ([0-9]+\\.[0-9]+\\.[0-9]+)",
+      "expected_version": "2.43.0",
+      "required": true
+    },
+    {
+      "id": "clang-tidy",
+      "name": "Clang-Tidy",
+      "command": "clang-tidy --version",
+      "regex": "version ([0-9]+\\.[0-9]+\\.[0-9]+)",
+      "expected_version": "14.0.6",
+      "required": true
+    },
+    {
+      "id": "pmccabe",
+      "name": "McCabe",
+      "command": "pmccabe -V",
+      "regex": "([0-9]+\\.[0-9]+)",
+      "expected_version": "2.8",
+      "required": true
+    },
+    {
+      "id": "cloc",
+      "name": "CLOC",
+      "command": "cloc --version",
+      "regex": "([0-9]+\\.[0-9]+)",
+      "expected_version": "1.96",
+      "required": true
+    },
+    {
+      "id": "cscope",
+      "name": "Cscope",
+      "command": "cscope -V",
+      "regex": "version ([0-9]+\\.[0-9]+)",
+      "expected_version": "15.9",
+      "required": true
+    },
+    {
+      "id": "cmsis-tools",
+      "name": "CMSIS-Tools",
+      "command": "csolution --version",
+      "regex": "([0-9]+\\.[0-9]+\\.[0-9]+)",
+      "expected_version": "2.9.0",
+      "required": true
+    }
+  ]
+}

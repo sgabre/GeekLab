@@ -1,0 +1,35 @@
+Extension;Install by;Identifier;Publisher;Version
+PlantUML;;jebbs.plantuml;jebbs;2.18.1
+Arm Keil Studio Pack;;arm.keil-studio-pack;Arm;1.22.0
+Arm CMSIS Solution;Arm Keil Studio Pack;arm.cmsis-csolution;Arm;1.72.0
+Arm CMSIS Debugger;Arm Keil Studio Pack;arm.vscode-cmsis-debugger;Arm;1.10.1
+Arm Tools Environment Manager;Arm Keil Studio Pack;arm.environment-manager;Arm;1.26.0
+clangd;Arm Keil Studio Pack;llvm-vs-code-extensions.vscode-clangd;LLVM;0.6.0
+YAML;Arm Keil Studio Pack;redhat.vscode-yaml;Red Hat;2.0.0
+CDT GDB Debug Adapter Extension;Arm Keil Studio Pack;Eclipse CDT Cloud;eclipse-cdt.cdt-gdb-vscode;2.9.1
+Memory Inspector;Arm Keil Studio Pack;Eclipse CDT Cloud;eclipse-cdt.memory-inspector;1.3.0
+Peripheral Inspector;Arm Keil Studio Pack;Eclipse CDT Cloud;eclipse-cdt.peripheral-inspector;1.11.0
+Serial Monitor;Arm Keil Studio Pack;ms-vscode.vscode-serial-monitor;Microsoft;0.13.1
+CMSIS Developer Assistant;;arm.cmsis-developer-assistant;Arm;2.8.0
+CMake Tools;;ms-vscode.cmake-tools;Microsoft;1.24.42
+C/C++ DevTools;CMake Tools;ms-vscode.cpp-devtools;Microsoft;0.6.18
+Hex Editor;;ms-vscode.hexeditor;Microsoft;1.11.1
+Doxygen Documentation Generator;;cschlosser.doxdocgen;Christoph Schlosser;1.4.0
+Remote Development;;ms-vscode-remote.vscode-remote-extensionpack;Microsoft;0.26.0
+Dev Containers;Remote Development;ms-vscode-remote.remote-containers;Microsoft;0.469.0
+Remote - SSH;Remote Development;ms-vscode-remote.remote-ssh;Microsoft;0.128.0
+WSL;Remote Development;ms-vscode-remote.remote-wsl;Microsoft;1.104.7
+Remote - Tunnels;Remote Development;ms-vscode.remote-server;Microsoft;1.5.4
+Python;;ms-python.python;Microsoft;2026.10.0
+Pylance;Python;ms-python.vscode-pylance;Microsoft;2026.4.1
+Python Debugger;Python;ms-python.debugpy;Microsoft;2026.6.0
+Python Environments;Python;ms-python.vscode-python-envs;Microsoft;1.42.0
+RobotCode - Robot Framework Support;;d-biehl.robotcode;robotcode.io;2.8.0
+RobotCode GherkinParser Support;;d-biehl.robotcode-gherkin;robotcode.io;0.2.1
+
+
+
+
+
+
+

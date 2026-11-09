@@ -1,0 +1,8 @@
+{
+	"PACK_VENDOR": "GSI",
+	"PACK_NAME": "Module",
+	"PACK_DIRS": ["../source"],
+	"PACK_BASE_FILES": ["../LICENSE", "../include/Module.h"],
+	"PDSC_FILES": ["../GSI.Module.pdsc"],
+	"PACK_WAREHOUSE": "../Packs"
+}

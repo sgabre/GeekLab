@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<package schemaVersion="1.4" xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:noNamespaceSchemaLocation="PACK.xsd">
+  <vendor>GSI</vendor>
+  <name>Bxxx</name>
+  <description>Board Support Pack for Bxxx</description>
+  <url></url>
+  <supportContact></supportContact>
+  <!-- optional license file -->
+  <license>docs/LICENSE.txt</license>
+  
+  <releases>
+    <release version="1.1.0" date="2020-12-01"> Board support bundle added </release>
+    <release version="1.0.0" date="2020-11-30"> Initial release</release>
+  </releases>
+
+  <keywords>
+    <keyword>GSI</keyword>
+    <keyword>Bxxx</keyword>
+    <keyword>BoardSupportPack</keyword>
+  </keywords>
+
+  <!-- boards section (mandatory for Board Support Packs) -->
+<boards>
+  <board vendor="GSI" name="Bxxx" revision="E1" salesContact="" orderForm="">
+    <description>GSI Bxxx Board Description</description>
+    <image small="docs/images/Bxxx_small.png" large="docs/images/Bxxx_large.png"/>
+    <book category="setup"     name="docs/Setup.pdf"      title="Getting Started"/>
+    <book category="schematic" name="docs/Schematics.pdf" title="Schematics"/>
+    <book category="manual"    name="docs/UserManual.pdf"         title="User Manual"/>
+    <mountedDevice  deviceIndex="0"  Dvendor="ARM:82"  Dname="ARMCM3"/>
+   <compatibleDevice  deviceIndex="0"  Dvendor="ARM:82"  Dname="ARMCM3"/>
+
+    <feature type="ODbg"       n="1"           name="On-board J-LINK Lite"/>
+    <feature type="PWR"        n="5"           name="USB Powered"/>
+    <feature type="DIO"        n="8"/>
+    <feature type="SPI"        n="1"/>
+    <feature type="LED"        n="6"           name="User LEDs"/>
+    <feature type="ArduinoFF"  n="1"/>
+    <debugInterface adapter="J-Link Lite"      connector="Mini-USB"/>
+  </board>
+</boards>
+
+  <!-- examples section (optional for all Software Packs)-->
+  <!--
+  <examples>
+  </examples>
+  -->
+  
+  <!-- conditions section (optional for all Software Packs)-->
+  <conditions>
+  <condition id="ARM Cortex M3 Series">
+    <description>ARM Cortex M3 device required</description>
+    <require Dvendor="ARM:82" Dname="ARMCM3"/>
+  </condition>
+  <condition id="Bxxx Board Setup">
+    <description>Board Setup Code required</description>
+    <require condition="ARM Cortex M3 Series"/>
+    <require Cclass="Board Support" Cgroup="Board Setup"/>
+  </condition>
+  </conditions>
+  
+  <!-- component section (optional for all Software Packs)-->
+  <components>
+    <bundle Cbundle="BxxxBoardSupport" Cclass="Board Support" Cversion="1.1.0">
+      <description>Bxxx custom board support package</description>
+      <doc>docs/Board.pdf</doc>
+      <!-- Bxxx Start-Up Code -->
+      <component Cgroup="Board Setup" condition="ARM Cortex M3 Series">
+        <description>Custom board setup code</description>
+        <files>
+          <file category="doc" name="docs/Setup.pdf"/>
+          <file category="header" name="include/Board.h"/>
+          <file category="source" name="source/Board.c"/>
+        </files>
+      </component>
+
+      <!-- Bxxx Water Sensor-->
+      <component Cgroup="I/O" Csub="Water Sensor" condition="Bxxx Board Setup">
+        <description>Water Sensor code for Clip-On board</description>
+        <files>
+          <file category="doc" name="docs/WaterSensor.pdf"/>
+          <file category="header" name="include/iWaterSensor.h"/>
+          <file category="header" name="config/WaterSensor_Config.h" attr="config" version="1.1.0"/>
+          <file category="source" name="source/WaterSensor.c"/>
+        </files>
+      </component>
+
+      <!-- Bxxx NFC-->
+      <component Cgroup="I/O" Csub="NFC" condition="Bxxx Board Setup">
+        <description>NFC code for Clip-On board</description>
+        <files>
+          <file category="doc" name="docs/NFC.pdf"/>
+          <file category="header" name="include/iNFC.h"/>
+          <file category="header" name="config/NFC_Config.h" attr="config" version="1.1.0"/>
+          <file category="source" name="source/NFC.c"/>
+        </files>
+      </component>
+      <!-- Bxxx Antenna (Antenna Switch)-->
+      <component Cgroup="I/O" Csub="Antenna" condition="Bxxx Board Setup">
+        <description>Antenna code for Clip-On board</description>
+        <files>
+          <file category="doc" name="docs/Antenna.pdf"/>
+          <file category="header" name="include/iAntenna.h"/>
+          <file category="header" name="config/Antenna_Config.h" attr="config" version="1.1.0"/>
+          <file category="source" name="source/Antenna.c"/>
+        </files>
+      </component>
+
+      <!-- Bxxx Radio (Wireless M-Bus)-->
+      <component Cgroup="I/O" Csub="Radio" condition="Bxxx Board Setup">
+        <description>Radio code for Clip-On board</description>
+        <files>
+          <file category="doc" name="docs/Radio.pdf"/>
+          <file category="header" name="include/iRadio.h"/>
+          <file category="header" name="config/Radio_Config.h" attr="config" version="1.1.0"/>
+          <file category="source" name="source/Radio.c"/>
+        </files>
+      </component>
+
+      <!-- Bxxx CEL (APP-CEL-IPC)-->
+      <component Cgroup="I/O" Csub="CEL" condition="Bxxx Board Setup">
+        <description>CEL code for Clip-On board</description>
+        <files>
+          <file category="doc" name="docs/CEL.pdf"/>
+          <file category="header" name="include/iCEL.h"/>
+          <file category="header" name="config/CEL_Config.h" attr="config" version="1.1.0"/>
+          <file category="source" name="source/Cellular.c"/>
+        </files>
+      </component>
+
+    </bundle>
+  </components>
+  
+</package>

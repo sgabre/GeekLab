@@ -1,0 +1,10 @@
+CompileFlags:
+  CompilationDatabase: /Users/sgabre/git/GeekLab/firmwares/out/tiny/ARMCM33/Debug
+
+---
+If:
+  PathMatch: .*\.(c|C|h)$
+CompileFlags:
+  Add:
+    - -include
+    - /Users/sgabre/git/GeekLab/firmwares/out/tiny/ARMCM33/Debug/compile_macros_c.h
